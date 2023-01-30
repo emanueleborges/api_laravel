@@ -18,12 +18,6 @@ use App\Http\Controllers\StudentsController;
 Route::resource('/students', StudentsController::class)
     ->only(['index','show','store','destroy','update']);
 
-// Route::get('/students',[StudentsController::class, 'index']);
-// Route::get('/students/{id}',[StudentsController::class, 'show']);
-// Route::post('/students',[StudentsController::class, 'store']);
-// Route::patch('/students/{id}',[StudentsController::class, 'update']);
-// Route::delete('/students/{id}',[StudentsController::class, 'destroy']);
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
